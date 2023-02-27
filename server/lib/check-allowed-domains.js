@@ -22,6 +22,8 @@ module.exports = function checkAllowedDomains(allowedDomains, email) {
       .split(' ')
       .map((domain) => domain.trim().toLowerCase());
 
+      console.log(domains, domain)
+
     return domains.includes(domain);
   }
   return false;

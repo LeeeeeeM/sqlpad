@@ -34,7 +34,8 @@ const getConfig = ({ command, mode }) => {
 
   // command is either build or serve
   if (command === 'serve') {
-    base = '/sqlpad/';
+    // base = '/sqlpad/';
+    base = '/'
   }
 
   return {
