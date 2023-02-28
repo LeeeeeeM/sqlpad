@@ -26,6 +26,12 @@ Documentation located at [https://getsqlpad.com](https://getsqlpad.com).
 
 For instructions on installing/running SQLPad from git repo see [DEVELOPER-GUIDE.md](https://github.com/sqlpad/sqlpad/blob/master/DEVELOPER-GUIDE.md)
 
+
+# notice
+本地要开启mysql服务
+
+然后分别在client和server文件夹中执行yarn，执行yarn start
+
 ## License
 
 MIT
