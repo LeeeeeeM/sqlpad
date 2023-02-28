@@ -78,7 +78,7 @@ function SqlEditor({
               height={height + 'px'}
               fontSize={14}
               highlightActiveLine={false}
-              mode="sql"
+              mode="sqlserver"
               name="query-ace-editor"
               onChange={onChange || noop}
               onLoad={(editor) => setEditor(editor)}
@@ -103,7 +103,7 @@ function SqlEditor({
       focus={!readOnly}
       fontSize={14}
       highlightActiveLine={false}
-      mode="sql"
+      mode="sqlserver"
       name="query-ace-editor"
       onChange={onChange || noop}
       onLoad={(editor) => setEditor(editor)}

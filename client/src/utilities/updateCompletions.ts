@@ -384,7 +384,9 @@ function updateCompletions(connectionSchema: ConnectionSchema) {
   };
 
   ace.acequire(['ace/ext/language_tools'], (langTools: any) => {
-    langTools.setCompleters([myCompleter]);
+    // console.log(langTools);
+    // 开启关键字 keyword 自动提示
+    langTools.setCompleters([myCompleter, langTools.keyWordCompleter, langTools.textCompleter, langTools.snippetCompleter]);
     // Note - later on might be able to set a completer for specific editor like:
     // editor.completers = [staticWordCompleter]
   });
