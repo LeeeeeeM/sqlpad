@@ -1,5 +1,5 @@
 import * as ace from 'ace-builds/src-noconflict/ace';
-import 'ace-builds/src-min-noconflict/ext-language_tools';
+import 'ace-builds/src-noconflict/ext-language_tools';
 import { ConnectionSchema } from '../types';
 
 export default updateCompletions;
@@ -168,7 +168,7 @@ function updateCompletions(connectionSchema: ConnectionSchema) {
   // \b indicates a boundary, the parens and pipes mean "one of these values"
   const tableRegex = new RegExp(`\\b(${tablePatterns.join('|')})\\b`, 'gi');
 
-  const keywordsRegex = /\b(from|join|select|where|group|having|on)\b/gi;
+  const keywordsRegex = /\b(from|join|select|where|group|having|on|order|by)\b/gi;
 
   const tableWantedKeywords = new Set(['from', 'join']);
   const columnWantedKeywords = new Set([
@@ -177,6 +177,8 @@ function updateCompletions(connectionSchema: ConnectionSchema) {
     'group',
     'having',
     'on',
+    'order',
+    'by'
   ]);
 
   const myCompleter = {

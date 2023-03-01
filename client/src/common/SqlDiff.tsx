@@ -5,6 +5,7 @@ import { diff as DiffEditor } from 'react-ace';
 // import 'ace-builds/src-noconflict/mode-sql';
 import 'ace-builds/src-noconflict/mode-sqlserver';
 import 'ace-builds/src-noconflict/theme-sqlserver';
+// import 'ace-builds/src-noconflict/theme-solarized_light';
 
 export interface Props {
   value?: string[];
@@ -34,7 +35,7 @@ function SqlDiff({ value }: Props) {
             focus={false}
             editorProps={{ $blockScrolling: Infinity }}
             height={`${height}px`}
-            mode="sql"
+            mode="sqlserver"
             name="query-diff-ace-editor"
             theme="sqlserver"
             readOnly={true}
