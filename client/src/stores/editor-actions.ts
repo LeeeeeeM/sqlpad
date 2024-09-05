@@ -128,6 +128,8 @@ export const initEditor = async (
       localforage.getItem('selectedConnectionId'),
     ]);
 
+    console.log(selectedConnectionId);
+
     let initialConnectionId = '';
 
     if (connections.length === 1) {
